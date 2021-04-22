@@ -6,3 +6,17 @@ html
   body
     div(align="center")
       h1= "Welcome!"
+      if username !== undefined
+        div
+          p
+            = "Hello, " + username + "."
+        div
+          a(class="button" href="/")
+            = "Logout"
+      else
+        div
+          p
+            = "You're not logged in."
+        div
+          a(class="button" href="/auth")
+            = "Login with GitHub"
